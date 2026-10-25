@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "m0-hello",
+    "title": "Hello, Python",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-1-first-program/",
+    "page_title": "0.1 Your first program"
+  },
+  {
+    "id": "m0-two-lines",
+    "title": "Two lines",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-1-first-program/",
+    "page_title": "0.1 Your first program"
+  },
+  {
+    "id": "m0-math-print",
+    "title": "Let Python do the math",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-1-first-program/",
+    "page_title": "0.1 Your first program"
+  },
+  {
+    "id": "m0-order",
+    "title": "Deal steps in order",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-1-first-program/",
+    "page_title": "0.1 Your first program"
+  },
+  {
+    "id": "m0-comment",
+    "title": "Comment it out",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-1-first-program/",
+    "page_title": "0.1 Your first program"
+  },
+  {
+    "id": "m0-fix-syntax",
+    "title": "Fix the SyntaxError",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-2-errors/",
+    "page_title": "0.2 Reading error messages"
+  },
+  {
+    "id": "m0-fix-name",
+    "title": "Fix the NameError (typo)",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-2-errors/",
+    "page_title": "0.2 Reading error messages"
+  },
+  {
+    "id": "m0-fix-quotes",
+    "title": "Fix the NameError (missing quotes)",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-2-errors/",
+    "page_title": "0.2 Reading error messages"
+  },
+  {
+    "id": "m0-fix-type",
+    "title": "Fix the TypeError",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-2-errors/",
+    "page_title": "0.2 Reading error messages"
+  },
+  {
+    "id": "m0-fix-two",
+    "title": "Two bugs",
+    "checkpoint": false,
+    "module": "module-0",
+    "page": "module-0/0-2-errors/",
+    "page_title": "0.2 Reading error messages"
+  },
+  {
+    "id": "m0-cp-tearsheet",
+    "title": "Mini tear sheet",
+    "checkpoint": true,
+    "module": "module-0",
+    "page": "module-0/checkpoint/",
+    "page_title": "Checkpoint 0"
+  },
+  {
+    "id": "m0-cp-debug",
+    "title": "Debug a broken summary",
+    "checkpoint": true,
+    "module": "module-0",
+    "page": "module-0/checkpoint/",
+    "page_title": "Checkpoint 0"
+  },
+  {
+    "id": "m1-compound",
+    "title": "Compound growth",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-1-numbers/",
+    "page_title": "1.1 Numbers and arithmetic"
+  },
+  {
+    "id": "m1-ear",
+    "title": "Effective annual rate",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-1-numbers/",
+    "page_title": "1.1 Numbers and arithmetic"
+  },
+  {
+    "id": "m1-shares",
+    "title": "Whole shares and leftover cash",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-1-numbers/",
+    "page_title": "1.1 Numbers and arithmetic"
+  },
+  {
+    "id": "m1-excel-trap",
+    "title": "The Excel ^ trap",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-1-numbers/",
+    "page_title": "1.1 Numbers and arithmetic"
+  },
+  {
+    "id": "m1-bond-price",
+    "title": "Price a bond by hand",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-1-numbers/",
+    "page_title": "1.1 Numbers and arithmetic"
+  },
+  {
+    "id": "m1-fv",
+    "title": "Future value with variables",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-2-variables/",
+    "page_title": "1.2 Variables"
+  },
+  {
+    "id": "m1-pv",
+    "title": "Present value",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-2-variables/",
+    "page_title": "1.2 Variables"
+  },
+  {
+    "id": "m1-leverage",
+    "title": "Leverage before and after a paydown",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-2-variables/",
+    "page_title": "1.2 Variables"
+  },
+  {
+    "id": "m1-cash",
+    "title": "Running cash balance",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-2-variables/",
+    "page_title": "1.2 Variables"
+  },
+  {
+    "id": "m1-bond-vars",
+    "title": "Bond price with variables",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-2-variables/",
+    "page_title": "1.2 Variables"
+  },
+  {
+    "id": "m1-fstring",
+    "title": "Build a summary line",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-3-strings/",
+    "page_title": "1.3 Text and formatting"
+  },
+  {
+    "id": "m1-pct",
+    "title": "Percent formatting",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-3-strings/",
+    "page_title": "1.3 Text and formatting"
+  },
+  {
+    "id": "m1-convert",
+    "title": "Text to number",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-3-strings/",
+    "page_title": "1.3 Text and formatting"
+  },
+  {
+    "id": "m1-ticker-clean",
+    "title": "Clean a ticker",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-3-strings/",
+    "page_title": "1.3 Text and formatting"
+  },
+  {
+    "id": "m1-big-number",
+    "title": "Format a large number",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-3-strings/",
+    "page_title": "1.3 Text and formatting"
+  },
+  {
+    "id": "m1-breach",
+    "title": "Leverage covenant test",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-4-booleans/",
+    "page_title": "1.4 True and False"
+  },
+  {
+    "id": "m1-healthy",
+    "title": "Two conditions with and",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-4-booleans/",
+    "page_title": "1.4 True and False"
+  },
+  {
+    "id": "m1-watchlist",
+    "title": "Two conditions with or",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-4-booleans/",
+    "page_title": "1.4 True and False"
+  },
+  {
+    "id": "m1-same-ticker",
+    "title": "Compare cleaned text",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-4-booleans/",
+    "page_title": "1.4 True and False"
+  },
+  {
+    "id": "m1-not",
+    "title": "not, and",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-4-booleans/",
+    "page_title": "1.4 True and False"
+  },
+  {
+    "id": "m1-cap-mortgage",
+    "title": "Mortgage payment",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-5-capstone/",
+    "page_title": "1.5 Capstone - loan payment"
+  },
+  {
+    "id": "m1-cap-termloan",
+    "title": "Term loan and interest coverage",
+    "checkpoint": false,
+    "module": "module-1",
+    "page": "module-1/1-5-capstone/",
+    "page_title": "1.5 Capstone - loan payment"
+  },
+  {
+    "id": "m1-cp-bond",
+    "title": "Bond price, discount flag, label",
+    "checkpoint": true,
+    "module": "module-1",
+    "page": "module-1/checkpoint/",
+    "page_title": "Checkpoint 1"
+  },
+  {
+    "id": "m1-cp-tv",
+    "title": "Terminal value with a sanity check",
+    "checkpoint": true,
+    "module": "module-1",
+    "page": "module-1/checkpoint/",
+    "page_title": "Checkpoint 1"
+  },
+  {
+    "id": "m2-breach-msg",
+    "title": "PASS or BREACH",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-1-if/",
+    "page_title": "2.1 Making decisions"
+  },
+  {
+    "id": "m2-bucket",
+    "title": "Leverage buckets",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-1-if/",
+    "page_title": "2.1 Making decisions"
+  },
+  {
+    "id": "m2-indent-fix",
+    "title": "Fix the IndentationError",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-1-if/",
+    "page_title": "2.1 Making decisions"
+  },
+  {
+    "id": "m2-elif-order",
+    "title": "Order matters",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-1-if/",
+    "page_title": "2.1 Making decisions"
+  },
+  {
+    "id": "m2-ytd-label",
+    "title": "Up, down or flat",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-1-if/",
+    "page_title": "2.1 Making decisions"
+  },
+  {
+    "id": "m2-fv-func",
+    "title": "Future value function",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-2-functions/",
+    "page_title": "2.2 Functions"
+  },
+  {
+    "id": "m2-pv-func",
+    "title": "Present value function",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-2-functions/",
+    "page_title": "2.2 Functions"
+  },
+  {
+    "id": "m2-return-bug",
+    "title": "print is not return",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-2-functions/",
+    "page_title": "2.2 Functions"
+  },
+  {
+    "id": "m2-ear-func",
+    "title": "Effective annual rate function",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-2-functions/",
+    "page_title": "2.2 Functions"
+  },
+  {
+    "id": "m2-fmt-money",
+    "title": "A money formatter",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-2-functions/",
+    "page_title": "2.2 Functions"
+  },
+  {
+    "id": "m2-is-breach",
+    "title": "Default parameter",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-3-decision-functions/",
+    "page_title": "2.3 Decisions inside functions"
+  },
+  {
+    "id": "m2-safe-div",
+    "title": "None for no answer",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-3-decision-functions/",
+    "page_title": "2.3 Decisions inside functions"
+  },
+  {
+    "id": "m2-pricing-grid",
+    "title": "Margin grid",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-3-decision-functions/",
+    "page_title": "2.3 Decisions inside functions"
+  },
+  {
+    "id": "m2-normalize-ltv",
+    "title": "Fix units in messy data",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-3-decision-functions/",
+    "page_title": "2.3 Decisions inside functions"
+  },
+  {
+    "id": "m2-payment-func",
+    "title": "Loan payment with an edge case",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-3-decision-functions/",
+    "page_title": "2.3 Decisions inside functions"
+  },
+  {
+    "id": "m2-compose",
+    "title": "One function calls another",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-4-building/",
+    "page_title": "2.4 Building with functions"
+  },
+  {
+    "id": "m2-scope-bug",
+    "title": "Fix the scope bug",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-4-building/",
+    "page_title": "2.4 Building with functions"
+  },
+  {
+    "id": "m2-two-values",
+    "title": "Return two values",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-4-building/",
+    "page_title": "2.4 Building with functions"
+  },
+  {
+    "id": "m2-tv-func",
+    "title": "Terminal value with a guard",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-4-building/",
+    "page_title": "2.4 Building with functions"
+  },
+  {
+    "id": "m2-ev-bridge",
+    "title": "EV to price per share",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-4-building/",
+    "page_title": "2.4 Building with functions"
+  },
+  {
+    "id": "m2-cap-covenant",
+    "title": "covenant_test",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-5-capstone/",
+    "page_title": "2.5 Capstone - covenant tool"
+  },
+  {
+    "id": "m2-cap-cushion",
+    "title": "ebitda_cushion",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-5-capstone/",
+    "page_title": "2.5 Capstone - covenant tool"
+  },
+  {
+    "id": "m2-cap-line",
+    "title": "covenant_line report",
+    "checkpoint": false,
+    "module": "module-2",
+    "page": "module-2/2-5-capstone/",
+    "page_title": "2.5 Capstone - covenant tool"
+  },
+  {
+    "id": "m2-cp-dscr",
+    "title": "DSCR status",
+    "checkpoint": true,
+    "module": "module-2",
+    "page": "module-2/checkpoint/",
+    "page_title": "Checkpoint 2"
+  },
+  {
+    "id": "m2-cp-shock",
+    "title": "Rate-shock report",
+    "checkpoint": true,
+    "module": "module-2",
+    "page": "module-2/checkpoint/",
+    "page_title": "Checkpoint 2"
+  },
+  {
+    "id": "m3-list-basics",
+    "title": "Positions and slices",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-1-lists/",
+    "page_title": "3.1 Lists"
+  },
+  {
+    "id": "m3-price-stats",
+    "title": "Price statistics",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-1-lists/",
+    "page_title": "3.1 Lists"
+  },
+  {
+    "id": "m3-append",
+    "title": "Grow a list",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-1-lists/",
+    "page_title": "3.1 Lists"
+  },
+  {
+    "id": "m3-index-fix",
+    "title": "Fix the IndexError",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-1-lists/",
+    "page_title": "3.1 Lists"
+  },
+  {
+    "id": "m3-slices",
+    "title": "Slice a year of returns",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-1-lists/",
+    "page_title": "3.1 Lists"
+  },
+  {
+    "id": "m3-total-inflows",
+    "title": "Running total",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-2-for-loops/",
+    "page_title": "3.2 For loops"
+  },
+  {
+    "id": "m3-count-breaches",
+    "title": "Count with a loop",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-2-for-loops/",
+    "page_title": "3.2 For loops"
+  },
+  {
+    "id": "m3-returns",
+    "title": "Price series to returns",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-2-for-loops/",
+    "page_title": "3.2 For loops"
+  },
+  {
+    "id": "m3-npv",
+    "title": "NPV with enumerate",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-2-for-loops/",
+    "page_title": "3.2 For loops"
+  },
+  {
+    "id": "m3-growth-path",
+    "title": "Build a projection",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-2-for-loops/",
+    "page_title": "3.2 For loops"
+  },
+  {
+    "id": "m3-dict-basics",
+    "title": "Look up, add, update",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-3-dicts/",
+    "page_title": "3.3 Dictionaries"
+  },
+  {
+    "id": "m3-rating-score",
+    "title": "Lookup with a default",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-3-dicts/",
+    "page_title": "3.3 Dictionaries"
+  },
+  {
+    "id": "m3-position-values",
+    "title": "Combine two lookup tables",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-3-dicts/",
+    "page_title": "3.3 Dictionaries"
+  },
+  {
+    "id": "m3-weights",
+    "title": "Portfolio weights",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-3-dicts/",
+    "page_title": "3.3 Dictionaries"
+  },
+  {
+    "id": "m3-count-ratings",
+    "title": "Count with .get",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-3-dicts/",
+    "page_title": "3.3 Dictionaries"
+  },
+  {
+    "id": "m3-tape-total",
+    "title": "Total balance",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-4-records/",
+    "page_title": "3.4 Tables as lists of dicts"
+  },
+  {
+    "id": "m3-tape-filter",
+    "title": "Filter rows",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-4-records/",
+    "page_title": "3.4 Tables as lists of dicts"
+  },
+  {
+    "id": "m3-tape-wavg",
+    "title": "Weighted average spread",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-4-records/",
+    "page_title": "3.4 Tables as lists of dicts"
+  },
+  {
+    "id": "m3-tape-group",
+    "title": "Group by sector",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-4-records/",
+    "page_title": "3.4 Tables as lists of dicts"
+  },
+  {
+    "id": "m3-tape-largest",
+    "title": "Find the largest row",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-4-records/",
+    "page_title": "3.4 Tables as lists of dicts"
+  },
+  {
+    "id": "m3-double",
+    "title": "Years to double",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-5-while/",
+    "page_title": "3.5 While loops and loop control"
+  },
+  {
+    "id": "m3-first-breach",
+    "title": "Stop at the first match",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-5-while/",
+    "page_title": "3.5 While loops and loop control"
+  },
+  {
+    "id": "m3-skip-bad",
+    "title": "Skip bad data",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-5-while/",
+    "page_title": "3.5 While loops and loop control"
+  },
+  {
+    "id": "m3-repay",
+    "title": "Cash sweep paydown",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-5-while/",
+    "page_title": "3.5 While loops and loop control"
+  },
+  {
+    "id": "m3-cap-schedule",
+    "title": "Build the schedule",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-6-capstone/",
+    "page_title": "3.6 Capstone - amortization schedule"
+  },
+  {
+    "id": "m3-cap-summary",
+    "title": "Summarize the schedule",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-6-capstone/",
+    "page_title": "3.6 Capstone - amortization schedule"
+  },
+  {
+    "id": "m3-cap-extra",
+    "title": "Pay it off early",
+    "checkpoint": false,
+    "module": "module-3",
+    "page": "module-3/3-6-capstone/",
+    "page_title": "3.6 Capstone - amortization schedule"
+  },
+  {
+    "id": "m3-cp-sector-weights",
+    "title": "Sector weights",
+    "checkpoint": true,
+    "module": "module-3",
+    "page": "module-3/checkpoint/",
+    "page_title": "Checkpoint 3"
+  },
+  {
+    "id": "m3-cp-payback",
+    "title": "Payback period",
+    "checkpoint": true,
+    "module": "module-3",
+    "page": "module-3/checkpoint/",
+    "page_title": "Checkpoint 3"
+  },
+  {
+    "id": "m4-to-number",
+    "title": "Text to number, safely",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-1-errors/",
+    "page_title": "4.1 Handling errors"
+  },
+  {
+    "id": "m4-parse-money",
+    "title": "Parse money strings",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-1-errors/",
+    "page_title": "4.1 Handling errors"
+  },
+  {
+    "id": "m4-safe-leverage",
+    "title": "Catch two kinds of error",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-1-errors/",
+    "page_title": "4.1 Handling errors"
+  },
+  {
+    "id": "m4-raise",
+    "title": "Raise on bad input",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-1-errors/",
+    "page_title": "4.1 Handling errors"
+  },
+  {
+    "id": "m4-keyerror",
+    "title": "Collect what's missing",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-1-errors/",
+    "page_title": "4.1 Handling errors"
+  },
+  {
+    "id": "m4-count-rows",
+    "title": "Count the rows",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-2-files/",
+    "page_title": "4.2 Reading and writing files"
+  },
+  {
+    "id": "m4-header",
+    "title": "Read the header",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-2-files/",
+    "page_title": "4.2 Reading and writing files"
+  },
+  {
+    "id": "m4-load-rows",
+    "title": "Load a CSV as a list of dicts",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-2-files/",
+    "page_title": "4.2 Reading and writing files"
+  },
+  {
+    "id": "m4-sector-counts",
+    "title": "Count by a column",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-2-files/",
+    "page_title": "4.2 Reading and writing files"
+  },
+  {
+    "id": "m4-write-csv",
+    "title": "Write a CSV",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-2-files/",
+    "page_title": "4.2 Reading and writing files"
+  },
+  {
+    "id": "m4-cap-load",
+    "title": "Load and clean the blotter",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-4-capstone/",
+    "page_title": "4.4 Capstone - trade blotter"
+  },
+  {
+    "id": "m4-cap-notional",
+    "title": "Notional by side",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-4-capstone/",
+    "page_title": "4.4 Capstone - trade blotter"
+  },
+  {
+    "id": "m4-cap-positions",
+    "title": "Net positions",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-4-capstone/",
+    "page_title": "4.4 Capstone - trade blotter"
+  },
+  {
+    "id": "m4-cap-exceptions",
+    "title": "Exceptions report",
+    "checkpoint": false,
+    "module": "module-4",
+    "page": "module-4/4-4-capstone/",
+    "page_title": "4.4 Capstone - trade blotter"
+  },
+  {
+    "id": "m4-cp-pct",
+    "title": "Percent parser",
+    "checkpoint": true,
+    "module": "module-4",
+    "page": "module-4/checkpoint/",
+    "page_title": "Checkpoint 4"
+  },
+  {
+    "id": "m4-cp-tape-total",
+    "title": "Total a messy loan tape",
+    "checkpoint": true,
+    "module": "module-4",
+    "page": "module-4/checkpoint/",
+    "page_title": "Checkpoint 4"
+  },
+  {
+    "id": "m5-npv-np",
+    "title": "NPV without a loop",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-1-numpy/",
+    "page_title": "5.1 NumPy arrays"
+  },
+  {
+    "id": "m5-returns-np",
+    "title": "Returns in one line",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-1-numpy/",
+    "page_title": "5.1 NumPy arrays"
+  },
+  {
+    "id": "m5-ann-vol",
+    "title": "Annualized volatility",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-1-numpy/",
+    "page_title": "5.1 NumPy arrays"
+  },
+  {
+    "id": "m5-mask",
+    "title": "Filter with a mask",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-1-numpy/",
+    "page_title": "5.1 NumPy arrays"
+  },
+  {
+    "id": "m5-where",
+    "title": "IF() for a whole array",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-1-numpy/",
+    "page_title": "5.1 NumPy arrays"
+  },
+  {
+    "id": "m5-load",
+    "title": "Load a CSV with pandas",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-2-dataframes/",
+    "page_title": "5.2 DataFrames"
+  },
+  {
+    "id": "m5-new-columns",
+    "title": "Add computed columns",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-2-dataframes/",
+    "page_title": "5.2 DataFrames"
+  },
+  {
+    "id": "m5-quick-facts",
+    "title": "Column summaries",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-2-dataframes/",
+    "page_title": "5.2 DataFrames"
+  },
+  {
+    "id": "m5-from-lists",
+    "title": "Build a DataFrame",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-2-dataframes/",
+    "page_title": "5.2 DataFrames"
+  },
+  {
+    "id": "m5-dtypes",
+    "title": "Spot a number stored as text",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-2-dataframes/",
+    "page_title": "5.2 DataFrames"
+  },
+  {
+    "id": "m5-filter",
+    "title": "One condition",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-3-filtering/",
+    "page_title": "5.3 Selecting and filtering"
+  },
+  {
+    "id": "m5-filter-and",
+    "title": "Combine conditions",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-3-filtering/",
+    "page_title": "5.3 Selecting and filtering"
+  },
+  {
+    "id": "m5-losers",
+    "title": "Compare two columns",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-3-filtering/",
+    "page_title": "5.3 Selecting and filtering"
+  },
+  {
+    "id": "m5-top-n",
+    "title": "Sort and take the top",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-3-filtering/",
+    "page_title": "5.3 Selecting and filtering"
+  },
+  {
+    "id": "m5-loan-filter",
+    "title": "Filter the loan tape",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-3-filtering/",
+    "page_title": "5.3 Selecting and filtering"
+  },
+  {
+    "id": "m5-group-sum",
+    "title": "Sum by group",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-4-grouping/",
+    "page_title": "5.4 Grouping and reshaping"
+  },
+  {
+    "id": "m5-value-counts",
+    "title": "Count per group",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-4-grouping/",
+    "page_title": "5.4 Grouping and reshaping"
+  },
+  {
+    "id": "m5-agg",
+    "title": "Named aggregations",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-4-grouping/",
+    "page_title": "5.4 Grouping and reshaping"
+  },
+  {
+    "id": "m5-loan-group",
+    "title": "Average by group on the loan tape",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-4-grouping/",
+    "page_title": "5.4 Grouping and reshaping"
+  },
+  {
+    "id": "m5-pivot",
+    "title": "Long to wide",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-4-grouping/",
+    "page_title": "5.4 Grouping and reshaping"
+  },
+  {
+    "id": "m5-cap-enrich",
+    "title": "Enrich the holdings",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-5-capstone/",
+    "page_title": "5.5 Capstone - portfolio holdings"
+  },
+  {
+    "id": "m5-cap-sector",
+    "title": "Sector exposure",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-5-capstone/",
+    "page_title": "5.5 Capstone - portfolio holdings"
+  },
+  {
+    "id": "m5-cap-concentration",
+    "title": "Concentration measures",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-5-capstone/",
+    "page_title": "5.5 Capstone - portfolio holdings"
+  },
+  {
+    "id": "m5-cap-limits",
+    "title": "Single-name limit breaches",
+    "checkpoint": false,
+    "module": "module-5",
+    "page": "module-5/5-5-capstone/",
+    "page_title": "5.5 Capstone - portfolio holdings"
+  },
+  {
+    "id": "m5-cp-vol",
+    "title": "Annualized vol per ticker",
+    "checkpoint": true,
+    "module": "module-5",
+    "page": "module-5/checkpoint/",
+    "page_title": "Checkpoint 5"
+  },
+  {
+    "id": "m5-cp-pnl",
+    "title": "Unrealized P&L by sector",
+    "checkpoint": true,
+    "module": "module-5",
+    "page": "module-5/checkpoint/",
+    "page_title": "Checkpoint 5"
+  }
+]

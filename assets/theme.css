@@ -1,0 +1,131 @@
+/* Site theme: a dark-first, developer-tool look on top of Material.
+   The --pp-* tokens are shared with exercise.css. */
+
+:root,
+[data-md-color-scheme="default"] {
+  --pp-bg: #ffffff;
+  --pp-surface: #f6f8fa;
+  --pp-border: #d0d7de;
+  --pp-muted: #57606a;
+  --pp-green: #1a7f37;
+  --pp-green-strong: #1f883d;
+  --pp-red: #cf222e;
+  --pp-amber: #9a6700;
+  --pp-blue: #0969da;
+
+  --md-primary-fg-color: #0d1117;
+  --md-primary-fg-color--light: #1f2630;
+  --md-primary-fg-color--dark: #010409;
+  --md-primary-bg-color: #e6edf3;
+  --md-accent-fg-color: var(--pp-green-strong);
+  --md-accent-fg-color--transparent: rgba(31, 136, 61, 0.1);
+  --md-typeset-a-color: var(--pp-blue);
+}
+
+[data-md-color-scheme="slate"] {
+  --pp-bg: #0d1117;
+  --pp-surface: #161b22;
+  --pp-border: #30363d;
+  --pp-muted: #8b949e;
+  --pp-green: #3fb950;
+  --pp-green-strong: #238636;
+  --pp-red: #f85149;
+  --pp-amber: #d29922;
+  --pp-blue: #58a6ff;
+
+  --md-hue: 215;
+  --md-default-bg-color: var(--pp-bg);
+  --md-default-fg-color: #e6edf3;
+  --md-default-fg-color--light: #c9d1d9;
+  --md-default-fg-color--lighter: #8b949e;
+  --md-default-fg-color--lightest: #30363d;
+  --md-code-bg-color: var(--pp-surface);
+  --md-code-fg-color: #e6edf3;
+  --md-footer-bg-color: #010409;
+  --md-footer-bg-color--dark: #010409;
+
+  --md-primary-fg-color: #010409;
+  --md-primary-fg-color--light: #161b22;
+  --md-primary-fg-color--dark: #010409;
+  --md-primary-bg-color: #e6edf3;
+  --md-accent-fg-color: var(--pp-green);
+  --md-accent-fg-color--transparent: rgba(63, 185, 80, 0.12);
+  --md-typeset-a-color: var(--pp-blue);
+}
+
+/* Header and tabs: one dark bar, with a hairline under it instead of a drop shadow. */
+.md-header,
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid #30363d;
+}
+
+.md-header__topic:first-child {
+  font-family: var(--md-code-font-family), monospace;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-tabs {
+  border-bottom: 1px solid #30363d;
+}
+
+.md-tabs__link {
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Headings: tighter and bolder than Material's light defaults. */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--pp-border);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* Inline code reads as a small chip. */
+.md-typeset :not(pre) > code {
+  border: 1px solid var(--pp-border);
+  border-radius: 4px;
+  padding: 0.05em 0.35em;
+  background: var(--pp-surface);
+}
+
+/* Code blocks in lessons get a border to match the editor panels. */
+.md-typeset pre > code {
+  border: 1px solid var(--pp-border);
+  border-radius: 6px;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--pp-border);
+  border-radius: 6px;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--pp-surface);
+}
+
+.md-nav__link--active {
+  font-weight: 600;
+}
