@@ -1966,7 +1966,7 @@ print(lev &gt; 5.25, lev[lev &gt; 5.25], (lev &gt; 5.25).sum())
 print(np.where(lev &gt; 5.25, "BREACH", "PASS"))</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
 <p>No <code>for</code> loops on this page: the point is to let NumPy do the looping.</p>
-<p><strong>1.</strong> Write <code>npv_np(rate, cash_flows)</code> without a loop. <code>cash_flows</code> arrives as an ordinary list, so convert it to an array first.</p>
+<p><strong>1.</strong> Write <code>npv_np(rate, cash_flows)</code> without a loop: the sum of each cash flow / (1 + rate)^t, with t = 0, 1, 2 and so on. <code>cash_flows</code> arrives as an ordinary list, so convert it to an array first.</p>
 <pre class="exercise"><code>id: m5-npv-np
 title: NPV without a loop
 packages: numpy
@@ -1990,7 +1990,7 @@ def npv_np(rate, cash_flows):
     cf = np.array(cash_flows)
     years = np.arange(len(cf))
     return (cf / (1 + rate) ** years).sum()</code></pre>
-<p><strong>2.</strong> Write <code>returns_np(prices)</code>, which returns an array of simple returns, one shorter than the prices. Use slicing, not a loop.</p>
+<p><strong>2.</strong> Write <code>returns_np(prices)</code>, which returns an array of simple returns (today's price / yesterday's price - 1), one shorter than the prices. Use slicing, not a loop.</p>
 <pre class="exercise"><code>id: m5-returns-np
 title: Returns in one line
 packages: numpy

@@ -1961,7 +1961,7 @@ print(round(leverage(900, 1250, 0.25), 2))
 mid, width = mid_and_spread(99.5, 100.5)
 print(mid, width)</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1.</strong> Write <code>ebitda(revenue, margin)</code>, then <code>leverage(debt, revenue, margin)</code>. <code>leverage</code> must call <code>ebitda</code> rather than repeat the math.</p>
+<p><strong>1.</strong> Write <code>ebitda(revenue, margin)</code>, then <code>leverage(debt, revenue, margin)</code>. EBITDA = revenue × margin, and leverage = debt / EBITDA. <code>leverage</code> must call <code>ebitda</code> rather than repeat the math.</p>
 <pre class="exercise"><code>id: m2-compose
 title: One function calls another
 --- starter
@@ -2009,7 +2009,7 @@ def add_fee(amount):
 
 total = add_fee(1000)
 print(total)</code></pre>
-<p><strong>3.</strong> Write <code>mid_and_spread_bps(bid, ask)</code>, which returns two values: the mid price, and the bid-ask spread in bps of the mid, (ask - bid) / mid × 10,000.</p>
+<p><strong>3.</strong> Write <code>mid_and_spread_bps(bid, ask)</code>, which returns two values: the mid price, (bid + ask) / 2, and the bid-ask spread in bps of the mid, (ask - bid) / mid × 10,000.</p>
 <pre class="exercise"><code>id: m2-two-values
 title: Return two values
 --- starter
@@ -2028,7 +2028,7 @@ def mid_and_spread_bps(bid, ask):
     mid = (bid + ask) / 2
     spread_bps = (ask - bid) / mid * 10000
     return mid, spread_bps</code></pre>
-<p><strong>4.</strong> Write <code>terminal_value(fcf_next, wacc, g)</code> with the Gordon growth formula. Return <code>None</code> when WACC is not greater than g, because the formula breaks there.</p>
+<p><strong>4.</strong> Write <code>terminal_value(fcf_next, wacc, g)</code> with the Gordon growth formula, fcf_next / (wacc - g). Return <code>None</code> when WACC is not greater than g, because the formula breaks there.</p>
 <pre class="exercise"><code>id: m2-tv-func
 title: Terminal value with a guard
 --- starter
@@ -2045,7 +2045,7 @@ def terminal_value(fcf_next, wacc, g):
     if wacc &lt;= g:
         return None
     return fcf_next / (wacc - g)</code></pre>
-<p><strong>5.</strong> Bridge from EV to price per share. Write <code>equity_value(ev, net_debt)</code>, then <code>price_per_share(ev, net_debt, shares)</code>, which calls <code>equity_value</code>. If equity value isn't positive, the equity is out of the money: return <code>0.0</code>.</p>
+<p><strong>5.</strong> Bridge from EV to price per share. Write <code>equity_value(ev, net_debt)</code>, then <code>price_per_share(ev, net_debt, shares)</code>, which calls <code>equity_value</code>. Equity value = EV - net debt, and price per share = equity value / shares. If equity value isn't positive, the equity is out of the money: return <code>0.0</code>.</p>
 <pre class="exercise"><code>id: m2-ev-bridge
 title: EV to price per share
 --- starter

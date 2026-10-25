@@ -1904,7 +1904,7 @@
 </code></pre></div>
 <p>Here <code>P</code> is the principal, <code>r</code> is the rate <strong>per period</strong>, and <code>n</code> is the <strong>number of periods</strong>. For monthly payments, r = annual rate / 12 and n = years × 12. In Python, (1 + r)^(-n) is <code>(1 + r) ** -n</code>.</p>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1. Mortgage.</strong> Fill in the calculations. All the variables named in the starter must exist when you're done.</p>
+<p><strong>1. Mortgage.</strong> Fill in the calculations with these formulas: monthly_rate = annual_rate / 12, n_payments = years × 12, payment = principal × monthly_rate / (1 - (1 + monthly_rate)^-n_payments), total_paid = payment × n_payments, and total_interest = total_paid - principal. All the variables named in the starter must exist when you're done.</p>
 <pre class="exercise"><code>id: m1-cap-mortgage
 title: Mortgage payment
 --- starter
@@ -1952,7 +1952,7 @@ total_interest = total_paid - principal
 # Output
 summary = f"Monthly payment: ${payment:,.2f}"
 print(summary)</code></pre>
-<p><strong>2. Term loan.</strong> A $50m, 5-year term loan priced at the base rate plus a spread, with <strong>quarterly</strong> level payments. Also test whether EBITDA covers a year of interest at least 2.0x. For simplicity, use the full $50m balance for the interest coverage.</p>
+<p><strong>2. Term loan.</strong> A $50m, 5-year term loan priced at the base rate plus a spread, with <strong>quarterly</strong> level payments. Also test whether EBITDA covers a year of interest at least 2.0x. For simplicity, use the full $50m balance for the interest coverage. Formulas: annual_rate = base_rate + spread_bps / 10,000, quarterly_rate = annual_rate / 4, n_payments = years × 4, the payment uses the same annuity formula as the mortgage, annual_interest = principal × annual_rate, and icr = EBITDA / annual_interest.</p>
 <pre class="exercise"><code>id: m1-cap-termloan
 title: Term loan and interest coverage
 --- starter

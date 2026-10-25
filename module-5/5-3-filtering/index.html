@@ -2053,7 +2053,7 @@ import pandas as pd
 
 def losers(df):
     return df.loc[df["price"] &lt; df["cost_basis"], "ticker"].tolist()</code></pre>
-<p><strong>4.</strong> Write <code>top_n(df, n)</code>. It adds <code>market_value</code>, then returns the <code>n</code> largest holdings by market value, largest first, with only the <code>ticker</code> and <code>market_value</code> columns.</p>
+<p><strong>4.</strong> Write <code>top_n(df, n)</code>. It adds <code>market_value</code> (shares × price), then returns the <code>n</code> largest holdings by market value, largest first, with only the <code>ticker</code> and <code>market_value</code> columns.</p>
 <pre class="exercise"><code>id: m5-top-n
 title: Sort and take the top
 packages: pandas

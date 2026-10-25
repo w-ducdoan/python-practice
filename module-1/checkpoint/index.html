@@ -1789,7 +1789,7 @@
 <p>No hints, and the solution unlocks only after you pass. Inputs at the top, calculations in the middle, output at the bottom.</p>
 <p><strong>1. Bond price.</strong> A 4-year bond with $1,000 face value pays a 4.5% annual coupon. The yield to maturity is 5.2%. Create:</p>
 <ul>
-<li><code>price</code>: the present value of all four years of cash flows</li>
+<li><code>price</code>: the present value of all four years of cash flows. Each year pays a coupon of face × coupon rate, and year 4 also repays the face value. Divide each year's cash flow by (1 + ytm)^year and add them up.</li>
 <li><code>is_discount</code>: <code>True</code> if the bond trades below face value</li>
 <li><code>label</code>: exactly <code>Price: $975.29 (discount)</code>. Build it with an f-string from <code>price</code>. You may type the word "discount."</li>
 </ul>

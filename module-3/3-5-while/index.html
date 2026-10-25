@@ -1958,7 +1958,7 @@ for p in prices:
         continue
     print("Using price", p)</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1.</strong> Write <code>years_to_double(rate)</code>. It returns how many whole years compounding at <code>rate</code> takes to reach at least twice the starting amount. Return <code>None</code> if <code>rate</code> is zero or negative, since the loop would never end.</p>
+<p><strong>1.</strong> Write <code>years_to_double(rate)</code>. It returns how many whole years compounding at <code>rate</code> takes to reach at least twice the starting amount. Each year the balance grows to balance × (1 + rate). Return <code>None</code> if <code>rate</code> is zero or negative, since the loop would never end.</p>
 <pre class="exercise"><code>id: m3-double
 title: Years to double
 --- starter

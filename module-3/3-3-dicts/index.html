@@ -2027,7 +2027,7 @@ SCORES = {"BB": 3, "B": 4, "CCC": 5}
 def rating_score(rating):
     key = rating.strip().upper()
     return SCORES.get(key)</code></pre>
-<p><strong>3.</strong> Write <code>position_values(holdings, prices)</code>. <code>holdings</code> maps each ticker to its shares, and <code>prices</code> maps each ticker to its price. Return a new dict mapping each ticker to its market value.</p>
+<p><strong>3.</strong> Write <code>position_values(holdings, prices)</code>. <code>holdings</code> maps each ticker to its shares, and <code>prices</code> maps each ticker to its price. Return a new dict mapping each ticker to its market value (shares × price).</p>
 <pre class="exercise"><code>id: m3-position-values
 title: Combine two lookup tables
 --- starter

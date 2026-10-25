@@ -1986,7 +1986,7 @@ wide = prices.pivot(index="date", columns="ticker", values="close")
 print(wide.head(3))
 print("shape:", wide.shape)</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1.</strong> Write <code>sector_market_value(df)</code>. It adds <code>market_value</code>, then returns the sum per sector as a Series.</p>
+<p><strong>1.</strong> Write <code>sector_market_value(df)</code>. It adds <code>market_value</code> (shares × price), then returns the sum per sector as a Series.</p>
 <pre class="exercise"><code>id: m5-group-sum
 title: Sum by group
 packages: pandas
@@ -2032,7 +2032,7 @@ import pandas as pd
 
 def sector_counts(df):
     return df["sector"].value_counts().to_dict()</code></pre>
-<p><strong>3.</strong> Write <code>sector_table(df)</code>. It returns one row per sector with three named columns: <code>positions</code> (the count of tickers), <code>market_value</code> (the sum) and <code>unrealized_pnl</code> (the sum of market value minus cost). Sort it by <code>market_value</code>, largest first.</p>
+<p><strong>3.</strong> Write <code>sector_table(df)</code>. It returns one row per sector with three named columns: <code>positions</code> (the count of tickers), <code>market_value</code> (the sum of shares × price) and <code>unrealized_pnl</code> (the sum of market value minus cost, where cost = shares × cost_basis). Sort it by <code>market_value</code>, largest first.</p>
 <pre class="exercise"><code>id: m5-agg
 title: Named aggregations
 packages: pandas

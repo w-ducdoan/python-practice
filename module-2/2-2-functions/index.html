@@ -1952,7 +1952,7 @@ print("a holds:", a)
 print("b holds:", b)              # None: show_leverage never returned anything
 print("Paydown case:", round(leverage(350, 90), 2))</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1.</strong> Write <code>fv(principal, rate, years)</code>. It should return the future value.</p>
+<p><strong>1.</strong> Write <code>fv(principal, rate, years)</code>. It should return the future value, principal × (1 + rate)^years.</p>
 <pre class="exercise"><code>id: m2-fv-func
 title: Future value function
 --- starter
@@ -1968,7 +1968,7 @@ One line: return principal * (1 + rate) ** years. Indent it inside the def.
 --- solution
 def fv(principal, rate, years):
     return principal * (1 + rate) ** years</code></pre>
-<p><strong>2.</strong> Write <code>pv(cash_flow, rate, years)</code>.</p>
+<p><strong>2.</strong> Write <code>pv(cash_flow, rate, years)</code>. It should return the present value, cash_flow / (1 + rate)^years.</p>
 <pre class="exercise"><code>id: m2-pv-func
 title: Present value function
 --- starter
@@ -2000,7 +2000,7 @@ def margin(ebitda, revenue):
     return ebitda / revenue
 
 ebitda_margin = margin(312.5, 1250)</code></pre>
-<p><strong>4.</strong> Write <code>ear(nominal, periods_per_year)</code>: the effective annual rate for a nominal rate compounded <code>periods_per_year</code> times a year.</p>
+<p><strong>4.</strong> Write <code>ear(nominal, periods_per_year)</code>: the effective annual rate for a nominal rate compounded <code>periods_per_year</code> times a year: (1 + nominal / periods_per_year)^periods_per_year - 1.</p>
 <pre class="exercise"><code>id: m2-ear-func
 title: Effective annual rate function
 --- starter

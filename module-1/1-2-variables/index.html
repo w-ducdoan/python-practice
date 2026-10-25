@@ -1947,7 +1947,7 @@ leverage = debt / ebitda
 print("Recalculated leverage:", round(leverage, 2))</code></pre>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
 <p>From here on, the tests check your <strong>variables</strong>, not just what you print. Use the exact names given.</p>
-<p><strong>1.</strong> Create <code>fv</code>: the future value of <code>principal</code> at <code>rate</code> for <code>years</code>. Use the variables, not the numbers.</p>
+<p><strong>1.</strong> Create <code>fv</code>: the future value of <code>principal</code> at <code>rate</code> for <code>years</code>, using FV = principal × (1 + rate)^years. Use the variables, not the numbers.</p>
 <pre class="exercise"><code>id: m1-fv
 title: Future value with variables
 --- starter
@@ -1960,14 +1960,14 @@ fv =
 check(approx(fv, 15938.48), f"fv should be about 15938.48 (yours: {fv})")
 check("principal" in code.split("fv")[-1] and "rate" in code.split("fv")[-1], "build fv from the variables principal, rate and years")
 --- hint
-fv = principal * (1 + rate) ** years
+Swap each word in the formula for its variable name. Use `*` for times and `**` for the power.
 --- solution
 principal = 10000
 rate = 0.06
 years = 8
 
 fv = principal * (1 + rate) ** years</code></pre>
-<p><strong>2.</strong> Create <code>pv</code>: the present value of $1,000,000 received in 5 years, discounted at 8%. Create the variables <code>cash_flow</code>, <code>discount_rate</code> and <code>years</code> first.</p>
+<p><strong>2.</strong> Create <code>pv</code>: the present value of $1,000,000 received in 5 years, discounted at 8%, using PV = cash flow / (1 + discount rate)^years. Create the variables <code>cash_flow</code>, <code>discount_rate</code> and <code>years</code> first.</p>
 <pre class="exercise"><code>id: m1-pv
 title: Present value
 --- starter
@@ -1979,7 +1979,7 @@ check(discount_rate == 0.08, "discount_rate should be 0.08")
 check(years == 5, "years should be 5")
 check(approx(pv, 680583.20), f"pv should be about 680583.20 (yours: {pv})")
 --- hint
-PV = cash flow / (1 + rate) ** years
+Put parentheses around `(1 + discount_rate)` so the addition happens before the power.
 --- hint
 You can write 1000000 or 1_000_000. Python ignores underscores inside numbers, which helps readability.
 --- solution
@@ -1987,7 +1987,7 @@ cash_flow = 1_000_000
 discount_rate = 0.08
 years = 5
 pv = cash_flow / (1 + discount_rate) ** years</code></pre>
-<p><strong>3.</strong> A borrower has $450m of debt and $90m of EBITDA. Calculate <code>leverage</code>. Then the borrower repays $100m: update <code>debt</code> and calculate <code>new_leverage</code>.</p>
+<p><strong>3.</strong> A borrower has $450m of debt and $90m of EBITDA. Calculate <code>leverage</code> (debt / EBITDA). Then the borrower repays $100m: update <code>debt</code> and calculate <code>new_leverage</code>.</p>
 <pre class="exercise"><code>id: m1-leverage
 title: Leverage before and after a paydown
 --- starter
@@ -2003,7 +2003,7 @@ check(debt == 350, f"debt should be 350 after the paydown (yours: {debt})")
 check(approx(new_leverage, 3.89), f"new_leverage should be about 3.89 (yours: {new_leverage})")
 check("debt=debt-100" in code.replace(" ", "") or "debt-=100" in code.replace(" ", ""), "update debt with debt = debt - 100 rather than typing 350")
 --- hint
-Leverage is debt divided by EBITDA.
+Division in Python is `/`.
 --- hint
 Update with debt = debt - 100, then new_leverage = debt / ebitda.
 --- solution
@@ -2031,7 +2031,7 @@ Each step is cash = cash - something or cash = cash + something.
 cash = 500
 cash = cash - 120
 cash = cash + 75</code></pre>
-<p><strong>5.</strong> Rewrite last lesson's bond price using variables: <code>coupon</code>, <code>face</code>, <code>ytm</code>. Store the result in <code>price</code>.</p>
+<p><strong>5.</strong> Rewrite last lesson's bond price using variables: <code>coupon</code>, <code>face</code>, <code>ytm</code>. Store the result in <code>price</code>. The formula: price = coupon / (1 + ytm) + coupon / (1 + ytm)^2 + (coupon + face) / (1 + ytm)^3.</p>
 <pre class="exercise"><code>id: m1-bond-vars
 title: Bond price with variables
 --- starter

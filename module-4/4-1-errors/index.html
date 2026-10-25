@@ -2060,7 +2060,7 @@ def leverage(debt, ebitda):
         return debt / ebitda
     except (ZeroDivisionError, TypeError):
         return None</code></pre>
-<p><strong>4.</strong> Write <code>annual_payment(principal, rate, years)</code>: a level annual payment. It must <code>raise ValueError</code> if <code>years</code> isn't positive or <code>principal</code> is negative. At a 0% rate, return principal / years.</p>
+<p><strong>4.</strong> Write <code>annual_payment(principal, rate, years)</code>: a level annual payment, principal × rate / (1 - (1 + rate)^-years). It must <code>raise ValueError</code> if <code>years</code> isn't positive or <code>principal</code> is negative. At a 0% rate, return principal / years.</p>
 <pre class="exercise"><code>id: m4-raise
 title: Raise on bad input
 --- starter

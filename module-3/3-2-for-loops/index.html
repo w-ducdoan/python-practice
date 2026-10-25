@@ -2002,7 +2002,7 @@ breaches = 0
 for lev in leverages:
     if lev &gt; max_lev:
         breaches += 1</code></pre>
-<p><strong>3.</strong> Write <code>daily_returns(prices)</code>, which returns a list of each day's return versus the day before. A list of 4 prices gives 3 returns.</p>
+<p><strong>3.</strong> Write <code>daily_returns(prices)</code>, which returns a list of each day's return versus the day before: today's price / yesterday's price - 1. A list of 4 prices gives 3 returns.</p>
 <pre class="exercise"><code>id: m3-returns
 title: Price series to returns
 --- starter
@@ -2026,7 +2026,7 @@ def daily_returns(prices):
     for i in range(1, len(prices)):
         returns.append(prices[i] / prices[i - 1] - 1)
     return returns</code></pre>
-<p><strong>4.</strong> Write <code>npv(rate, cash_flows)</code>. The first cash flow is year 0 and isn't discounted. Use <code>enumerate</code>.</p>
+<p><strong>4.</strong> Write <code>npv(rate, cash_flows)</code>: the sum of each cash flow / (1 + rate)^t, where t is its year. The first cash flow is year 0, so it isn't discounted. Use <code>enumerate</code>.</p>
 <pre class="exercise"><code>id: m3-npv
 title: NPV with enumerate
 --- starter
@@ -2044,7 +2044,7 @@ def npv(rate, cash_flows):
     for t, cf in enumerate(cash_flows):
         total += cf / (1 + rate) ** t
     return total</code></pre>
-<p><strong>5.</strong> Write <code>growth_path(start, rate, years)</code>, which returns the year-end balance for each year. <code>growth_path(1000, 0.05, 3)</code> gives <code>[1050.0, 1102.5, 1157.625]</code>.</p>
+<p><strong>5.</strong> Write <code>growth_path(start, rate, years)</code>, which returns the year-end balance for each year. Each year, balance = balance × (1 + rate). <code>growth_path(1000, 0.05, 3)</code> gives <code>[1050.0, 1102.5, 1157.625]</code>.</p>
 <pre class="exercise"><code>id: m3-growth-path
 title: Build a projection
 --- starter

@@ -1932,7 +1932,7 @@ next period's beginning balance = this period's ending balance
 <p>You'll build it in three steps: the schedule, a summary of it, then an early-paydown scenario that answers a question a borrower might ask: what does an extra $200 a month save?</p>
 <p>Each starter includes the finished <code>payment()</code> function from Module 2.</p>
 <h2 id="practice">Practice<a class="headerlink" href="#practice" title="Permanent link">&para;</a></h2>
-<p><strong>1.</strong> Write <code>amortization_schedule(principal, annual_rate, years, periods_per_year=12)</code>. It returns a list with one dict per period, with exactly these keys: <code>period</code> (counting from 1), <code>begin</code>, <code>payment</code>, <code>interest</code>, <code>principal</code>, <code>end</code>.</p>
+<p><strong>1.</strong> Write <code>amortization_schedule(principal, annual_rate, years, periods_per_year=12)</code>. It returns a list with one dict per period, with exactly these keys: <code>period</code> (counting from 1), <code>begin</code>, <code>payment</code>, <code>interest</code>, <code>principal</code>, <code>end</code>. Each period: interest = begin × periodic rate (annual_rate / periods_per_year), principal = payment - interest, end = begin - principal, and the next period begins at this period's end.</p>
 <pre class="exercise"><code>id: m3-cap-schedule
 title: Build the schedule
 --- starter
@@ -2072,6 +2072,7 @@ def schedule_summary(schedule):
 <p><strong>3.</strong> Write <code>schedule_with_extra(principal, annual_rate, years, extra, periods_per_year=12)</code>. The borrower pays the normal payment <strong>plus</strong> <code>extra</code> every period until the loan is gone, so you don't know the number of periods in advance. That calls for a <code>while</code> loop. Rules:</p>
 <ul>
 <li>Keep going while the balance is above 0.01 (a cent, to ignore round-off).</li>
+<li>Interest each period is balance × periodic rate.</li>
 <li>Principal paid each period is <code>payment + extra - interest</code>, capped at the remaining balance so the last payment doesn't overpay: use <code>min(..., balance)</code>.</li>
 <li>The row's <code>payment</code> is what was actually paid: interest plus principal paid.</li>
 </ul>
