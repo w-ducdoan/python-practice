@@ -105,5 +105,5 @@ def covenant_test(debt, ebitda, max_lev):
 - **Review items reuse the same exercise.** Review mode opens a fresh editor, but the numbers are the same. Randomized variants are a later addition.
 - **One missed Check during a review counts as a lapse,** even if it was a typo. That's the strict Leitner rule. Loosen it if it feels punishing in practice.
 - **Progress lives in one browser.** Use Export/Import on the Home page.
-- **Not published yet.** GitHub Pages hosting is the next step once you want the site on your phone. `mkdocs gh-deploy` does it from a GitHub repo.
+- **Publishing.** The site is public on GitHub Pages. After changing anything, commit and `git push` the source, then run `.venv/Scripts/mkdocs gh-deploy --force --strict` to rebuild the live site (about a minute to go live). Commits use the GitHub no-reply email set in this repo's git config, because GitHub blocks pushes that expose the private address.
 - **Material for MkDocs reaches end of life on May 5, 2027** (security fixes until then). Its successor, Zensical, reads the same `mkdocs.yml`, so migrating later should be small.
