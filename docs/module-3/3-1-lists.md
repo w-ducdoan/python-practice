@@ -81,7 +81,7 @@ n_years = len(cash_flows) - 1
 inflows = cash_flows[1:]
 ```
 
-**2.** From a week of closing prices, create `high`, `low`, `average`, and `range_pct`: the high-to-low range as a fraction of the low.
+**2.** From a week of closing prices, create `high`, `low`, `average`, and `range_pct`: the high-to-low range as a fraction of the low, (high - low) / low.
 
 ```exercise
 id: m3-price-stats

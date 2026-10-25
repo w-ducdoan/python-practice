@@ -119,7 +119,7 @@ for lev in leverages:
         breaches += 1
 ```
 
-**3.** Write `daily_returns(prices)`, which returns a list of each day's return versus the day before. A list of 4 prices gives 3 returns.
+**3.** Write `daily_returns(prices)`, which returns a list of each day's return versus the day before: today's price / yesterday's price - 1. A list of 4 prices gives 3 returns.
 
 ```exercise
 id: m3-returns
@@ -147,7 +147,7 @@ def daily_returns(prices):
     return returns
 ```
 
-**4.** Write `npv(rate, cash_flows)`. The first cash flow is year 0 and isn't discounted. Use `enumerate`.
+**4.** Write `npv(rate, cash_flows)`: the sum of each cash flow / (1 + rate)^t, where t is its year. The first cash flow is year 0, so it isn't discounted. Use `enumerate`.
 
 ```exercise
 id: m3-npv
@@ -169,7 +169,7 @@ def npv(rate, cash_flows):
     return total
 ```
 
-**5.** Write `growth_path(start, rate, years)`, which returns the year-end balance for each year. `growth_path(1000, 0.05, 3)` gives `[1050.0, 1102.5, 1157.625]`.
+**5.** Write `growth_path(start, rate, years)`, which returns the year-end balance for each year. Each year, balance = balance × (1 + rate). `growth_path(1000, 0.05, 3)` gives `[1050.0, 1102.5, 1157.625]`.
 
 ```exercise
 id: m3-growth-path

@@ -44,7 +44,7 @@ print(round(0.1 + 0.2, 2))
 
 ## Practice
 
-**1.** $1,000 compounds at 5% a year for 10 years. Print the ending value rounded to 2 decimals.
+**1.** $1,000 compounds at 5% a year for 10 years. Print the ending value, starting amount × (1 + rate)^years, rounded to 2 decimals.
 
 ```exercise
 id: m1-compound
@@ -55,7 +55,7 @@ print()
 check(output.strip() == "1628.89", f"should print 1628.89 (yours: {output.strip() or 'nothing'})")
 check("**" in code, "use ** for the power")
 --- hint
-Ending value = 1000 times (1.05 to the power 10).
+Python's power operator is `**`, so 1.05 to the power 10 is `1.05 ** 10`.
 --- hint
 Wrap the whole calculation in round(..., 2).
 --- solution

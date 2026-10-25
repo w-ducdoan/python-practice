@@ -158,7 +158,7 @@ def leverage(debt, ebitda):
         return None
 ```
 
-**4.** Write `annual_payment(principal, rate, years)`: a level annual payment. It must `raise ValueError` if `years` isn't positive or `principal` is negative. At a 0% rate, return principal / years.
+**4.** Write `annual_payment(principal, rate, years)`: a level annual payment, principal × rate / (1 - (1 + rate)^-years). It must `raise ValueError` if `years` isn't positive or `principal` is negative. At a 0% rate, return principal / years.
 
 ```exercise
 id: m4-raise

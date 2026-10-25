@@ -67,7 +67,7 @@ print(mid, width)
 
 ## Practice
 
-**1.** Write `ebitda(revenue, margin)`, then `leverage(debt, revenue, margin)`. `leverage` must call `ebitda` rather than repeat the math.
+**1.** Write `ebitda(revenue, margin)`, then `leverage(debt, revenue, margin)`. EBITDA = revenue × margin, and leverage = debt / EBITDA. `leverage` must call `ebitda` rather than repeat the math.
 
 ```exercise
 id: m2-compose
@@ -123,7 +123,7 @@ total = add_fee(1000)
 print(total)
 ```
 
-**3.** Write `mid_and_spread_bps(bid, ask)`, which returns two values: the mid price, and the bid-ask spread in bps of the mid, (ask - bid) / mid × 10,000.
+**3.** Write `mid_and_spread_bps(bid, ask)`, which returns two values: the mid price, (bid + ask) / 2, and the bid-ask spread in bps of the mid, (ask - bid) / mid × 10,000.
 
 ```exercise
 id: m2-two-values
@@ -146,7 +146,7 @@ def mid_and_spread_bps(bid, ask):
     return mid, spread_bps
 ```
 
-**4.** Write `terminal_value(fcf_next, wacc, g)` with the Gordon growth formula. Return `None` when WACC is not greater than g, because the formula breaks there.
+**4.** Write `terminal_value(fcf_next, wacc, g)` with the Gordon growth formula, fcf_next / (wacc - g). Return `None` when WACC is not greater than g, because the formula breaks there.
 
 ```exercise
 id: m2-tv-func
@@ -167,7 +167,7 @@ def terminal_value(fcf_next, wacc, g):
     return fcf_next / (wacc - g)
 ```
 
-**5.** Bridge from EV to price per share. Write `equity_value(ev, net_debt)`, then `price_per_share(ev, net_debt, shares)`, which calls `equity_value`. If equity value isn't positive, the equity is out of the money: return `0.0`.
+**5.** Bridge from EV to price per share. Write `equity_value(ev, net_debt)`, then `price_per_share(ev, net_debt, shares)`, which calls `equity_value`. Equity value = EV - net debt, and price per share = equity value / shares. If equity value isn't positive, the equity is out of the money: return `0.0`.
 
 ```exercise
 id: m2-ev-bridge

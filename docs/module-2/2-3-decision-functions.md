@@ -165,7 +165,7 @@ def normalize_ltv(ltv):
     return ltv
 ```
 
-**5.** Turn the Module 1 annuity formula into `payment(principal, annual_rate, years, periods_per_year=12)`. Handle the edge case: at a 0% rate the formula divides by zero, so return principal divided by the number of payments instead.
+**5.** Turn the Module 1 annuity formula into `payment(principal, annual_rate, years, periods_per_year=12)`. The formula is payment = principal × r / (1 - (1 + r)^-n), where r = annual_rate / periods_per_year and n = years × periods_per_year. Handle the edge case: at a 0% rate the formula divides by zero, so return principal divided by the number of payments instead.
 
 ```exercise
 id: m2-payment-func

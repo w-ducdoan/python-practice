@@ -143,7 +143,7 @@ def losers(df):
     return df.loc[df["price"] < df["cost_basis"], "ticker"].tolist()
 ```
 
-**4.** Write `top_n(df, n)`. It adds `market_value`, then returns the `n` largest holdings by market value, largest first, with only the `ticker` and `market_value` columns.
+**4.** Write `top_n(df, n)`. It adds `market_value` (shares × price), then returns the `n` largest holdings by market value, largest first, with only the `ticker` and `market_value` columns.
 
 ```exercise
 id: m5-top-n

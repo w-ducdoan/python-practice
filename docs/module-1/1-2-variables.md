@@ -51,7 +51,7 @@ print("Recalculated leverage:", round(leverage, 2))
 
 From here on, the tests check your **variables**, not just what you print. Use the exact names given.
 
-**1.** Create `fv`: the future value of `principal` at `rate` for `years`. Use the variables, not the numbers.
+**1.** Create `fv`: the future value of `principal` at `rate` for `years`, using FV = principal × (1 + rate)^years. Use the variables, not the numbers.
 
 ```exercise
 id: m1-fv
@@ -66,7 +66,7 @@ fv =
 check(approx(fv, 15938.48), f"fv should be about 15938.48 (yours: {fv})")
 check("principal" in code.split("fv")[-1] and "rate" in code.split("fv")[-1], "build fv from the variables principal, rate and years")
 --- hint
-fv = principal * (1 + rate) ** years
+Swap each word in the formula for its variable name. Use `*` for times and `**` for the power.
 --- solution
 principal = 10000
 rate = 0.06
@@ -75,7 +75,7 @@ years = 8
 fv = principal * (1 + rate) ** years
 ```
 
-**2.** Create `pv`: the present value of $1,000,000 received in 5 years, discounted at 8%. Create the variables `cash_flow`, `discount_rate` and `years` first.
+**2.** Create `pv`: the present value of $1,000,000 received in 5 years, discounted at 8%, using PV = cash flow / (1 + discount rate)^years. Create the variables `cash_flow`, `discount_rate` and `years` first.
 
 ```exercise
 id: m1-pv
@@ -89,7 +89,7 @@ check(discount_rate == 0.08, "discount_rate should be 0.08")
 check(years == 5, "years should be 5")
 check(approx(pv, 680583.20), f"pv should be about 680583.20 (yours: {pv})")
 --- hint
-PV = cash flow / (1 + rate) ** years
+Put parentheses around `(1 + discount_rate)` so the addition happens before the power.
 --- hint
 You can write 1000000 or 1_000_000. Python ignores underscores inside numbers, which helps readability.
 --- solution
@@ -99,7 +99,7 @@ years = 5
 pv = cash_flow / (1 + discount_rate) ** years
 ```
 
-**3.** A borrower has $450m of debt and $90m of EBITDA. Calculate `leverage`. Then the borrower repays $100m: update `debt` and calculate `new_leverage`.
+**3.** A borrower has $450m of debt and $90m of EBITDA. Calculate `leverage` (debt / EBITDA). Then the borrower repays $100m: update `debt` and calculate `new_leverage`.
 
 ```exercise
 id: m1-leverage
@@ -117,7 +117,7 @@ check(debt == 350, f"debt should be 350 after the paydown (yours: {debt})")
 check(approx(new_leverage, 3.89), f"new_leverage should be about 3.89 (yours: {new_leverage})")
 check("debt=debt-100" in code.replace(" ", "") or "debt-=100" in code.replace(" ", ""), "update debt with debt = debt - 100 rather than typing 350")
 --- hint
-Leverage is debt divided by EBITDA.
+Division in Python is `/`.
 --- hint
 Update with debt = debt - 100, then new_leverage = debt / ebitda.
 --- solution
@@ -151,7 +151,7 @@ cash = cash - 120
 cash = cash + 75
 ```
 
-**5.** Rewrite last lesson's bond price using variables: `coupon`, `face`, `ytm`. Store the result in `price`.
+**5.** Rewrite last lesson's bond price using variables: `coupon`, `face`, `ytm`. Store the result in `price`. The formula: price = coupon / (1 + ytm) + coupon / (1 + ytm)^2 + (coupon + face) / (1 + ytm)^3.
 
 ```exercise
 id: m1-bond-vars

@@ -85,7 +85,7 @@ print("Ticker: ACME")
 print("Price:", 120.5)
 ```
 
-**3.** A $1,000 deposit earns 5% for one year. Have Python calculate the ending balance and print it. Don't type the answer yourself.
+**3.** A $1,000 deposit earns 5% for one year. Have Python calculate the ending balance, deposit × (1 + rate), and print it. Don't type the answer yourself.
 
 ```exercise
 id: m0-math-print

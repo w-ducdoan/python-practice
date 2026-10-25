@@ -22,7 +22,7 @@ Here `P` is the principal, `r` is the rate **per period**, and `n` is the **numb
 
 ## Practice
 
-**1. Mortgage.** Fill in the calculations. All the variables named in the starter must exist when you're done.
+**1. Mortgage.** Fill in the calculations with these formulas: monthly_rate = annual_rate / 12, n_payments = years × 12, payment = principal × monthly_rate / (1 - (1 + monthly_rate)^-n_payments), total_paid = payment × n_payments, and total_interest = total_paid - principal. All the variables named in the starter must exist when you're done.
 
 ```exercise
 id: m1-cap-mortgage
@@ -74,7 +74,7 @@ summary = f"Monthly payment: ${payment:,.2f}"
 print(summary)
 ```
 
-**2. Term loan.** A $50m, 5-year term loan priced at the base rate plus a spread, with **quarterly** level payments. Also test whether EBITDA covers a year of interest at least 2.0x. For simplicity, use the full $50m balance for the interest coverage.
+**2. Term loan.** A $50m, 5-year term loan priced at the base rate plus a spread, with **quarterly** level payments. Also test whether EBITDA covers a year of interest at least 2.0x. For simplicity, use the full $50m balance for the interest coverage. Formulas: annual_rate = base_rate + spread_bps / 10,000, quarterly_rate = annual_rate / 4, n_payments = years × 4, the payment uses the same annuity formula as the mortgage, annual_interest = principal × annual_rate, and icr = EBITDA / annual_interest.
 
 ```exercise
 id: m1-cap-termloan

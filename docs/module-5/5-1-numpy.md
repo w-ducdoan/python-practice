@@ -68,7 +68,7 @@ print(np.where(lev > 5.25, "BREACH", "PASS"))
 
 No `for` loops on this page: the point is to let NumPy do the looping.
 
-**1.** Write `npv_np(rate, cash_flows)` without a loop. `cash_flows` arrives as an ordinary list, so convert it to an array first.
+**1.** Write `npv_np(rate, cash_flows)` without a loop: the sum of each cash flow / (1 + rate)^t, with t = 0, 1, 2 and so on. `cash_flows` arrives as an ordinary list, so convert it to an array first.
 
 ```exercise
 id: m5-npv-np
@@ -96,7 +96,7 @@ def npv_np(rate, cash_flows):
     return (cf / (1 + rate) ** years).sum()
 ```
 
-**2.** Write `returns_np(prices)`, which returns an array of simple returns, one shorter than the prices. Use slicing, not a loop.
+**2.** Write `returns_np(prices)`, which returns an array of simple returns (today's price / yesterday's price - 1), one shorter than the prices. Use slicing, not a loop.
 
 ```exercise
 id: m5-returns-np

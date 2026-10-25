@@ -31,7 +31,7 @@ Each starter includes the finished `payment()` function from Module 2.
 
 ## Practice
 
-**1.** Write `amortization_schedule(principal, annual_rate, years, periods_per_year=12)`. It returns a list with one dict per period, with exactly these keys: `period` (counting from 1), `begin`, `payment`, `interest`, `principal`, `end`.
+**1.** Write `amortization_schedule(principal, annual_rate, years, periods_per_year=12)`. It returns a list with one dict per period, with exactly these keys: `period` (counting from 1), `begin`, `payment`, `interest`, `principal`, `end`. Each period: interest = begin × periodic rate (annual_rate / periods_per_year), principal = payment - interest, end = begin - principal, and the next period begins at this period's end.
 
 ```exercise
 id: m3-cap-schedule
@@ -178,6 +178,7 @@ def schedule_summary(schedule):
 **3.** Write `schedule_with_extra(principal, annual_rate, years, extra, periods_per_year=12)`. The borrower pays the normal payment **plus** `extra` every period until the loan is gone, so you don't know the number of periods in advance. That calls for a `while` loop. Rules:
 
 - Keep going while the balance is above 0.01 (a cent, to ignore round-off).
+- Interest each period is balance × periodic rate.
 - Principal paid each period is `payment + extra - interest`, capped at the remaining balance so the last payment doesn't overpay: use `min(..., balance)`.
 - The row's `payment` is what was actually paid: interest plus principal paid.
 

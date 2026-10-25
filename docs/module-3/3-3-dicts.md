@@ -113,7 +113,7 @@ def rating_score(rating):
     return SCORES.get(key)
 ```
 
-**3.** Write `position_values(holdings, prices)`. `holdings` maps each ticker to its shares, and `prices` maps each ticker to its price. Return a new dict mapping each ticker to its market value.
+**3.** Write `position_values(holdings, prices)`. `holdings` maps each ticker to its shares, and `prices` maps each ticker to its price. Return a new dict mapping each ticker to its market value (shares × price).
 
 ```exercise
 id: m3-position-values

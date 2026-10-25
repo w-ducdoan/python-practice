@@ -58,7 +58,7 @@ for p in prices:
 
 ## Practice
 
-**1.** Write `years_to_double(rate)`. It returns how many whole years compounding at `rate` takes to reach at least twice the starting amount. Return `None` if `rate` is zero or negative, since the loop would never end.
+**1.** Write `years_to_double(rate)`. It returns how many whole years compounding at `rate` takes to reach at least twice the starting amount. Each year the balance grows to balance × (1 + rate). Return `None` if `rate` is zero or negative, since the loop would never end.
 
 ```exercise
 id: m3-double

@@ -12,7 +12,7 @@ No hints, and the solution unlocks only after you pass. Inputs at the top, calcu
 
 **1. Bond price.** A 4-year bond with $1,000 face value pays a 4.5% annual coupon. The yield to maturity is 5.2%. Create:
 
-- `price`: the present value of all four years of cash flows
+- `price`: the present value of all four years of cash flows. Each year pays a coupon of face × coupon rate, and year 4 also repays the face value. Divide each year's cash flow by (1 + ytm)^year and add them up.
 - `is_discount`: `True` if the bond trades below face value
 - `label`: exactly `Price: $975.29 (discount)`. Build it with an f-string from `price`. You may type the word "discount."
 

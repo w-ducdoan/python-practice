@@ -51,7 +51,7 @@ print("Paydown case:", round(leverage(350, 90), 2))
 
 ## Practice
 
-**1.** Write `fv(principal, rate, years)`. It should return the future value.
+**1.** Write `fv(principal, rate, years)`. It should return the future value, principal × (1 + rate)^years.
 
 ```exercise
 id: m2-fv-func
@@ -71,7 +71,7 @@ def fv(principal, rate, years):
     return principal * (1 + rate) ** years
 ```
 
-**2.** Write `pv(cash_flow, rate, years)`.
+**2.** Write `pv(cash_flow, rate, years)`. It should return the present value, cash_flow / (1 + rate)^years.
 
 ```exercise
 id: m2-pv-func
@@ -111,7 +111,7 @@ def margin(ebitda, revenue):
 ebitda_margin = margin(312.5, 1250)
 ```
 
-**4.** Write `ear(nominal, periods_per_year)`: the effective annual rate for a nominal rate compounded `periods_per_year` times a year.
+**4.** Write `ear(nominal, periods_per_year)`: the effective annual rate for a nominal rate compounded `periods_per_year` times a year: (1 + nominal / periods_per_year)^periods_per_year - 1.
 
 ```exercise
 id: m2-ear-func

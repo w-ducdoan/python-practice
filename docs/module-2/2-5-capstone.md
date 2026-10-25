@@ -31,7 +31,7 @@ Each exercise below copies in the finished functions from the earlier steps, so 
 
 - EBITDA ≤ 0 gives `("N/M", None)`.
 - Leverage at or below the maximum gives `"PASS"`, and above it gives `"BREACH"`.
-- `headroom` is `max_lev - leverage`.
+- `headroom` is `max_lev - leverage`, where leverage = debt / EBITDA.
 
 ```exercise
 id: m2-cap-covenant
@@ -65,7 +65,7 @@ def covenant_test(debt, ebitda, max_lev):
     return "BREACH", headroom
 ```
 
-**2.** Write `ebitda_cushion(debt, ebitda, max_lev)`: return the EBITDA cushion as a decimal, or `None` when EBITDA ≤ 0.
+**2.** Write `ebitda_cushion(debt, ebitda, max_lev)`: return the EBITDA cushion as a decimal, or `None` when EBITDA ≤ 0. The cushion is how far EBITDA can fall before the covenant breaks: minimum EBITDA = debt / max_lev, and cushion = 1 - minimum EBITDA / EBITDA.
 
 ```exercise
 id: m2-cap-cushion
@@ -80,7 +80,7 @@ check(approx(ebitda_cushion(500, 90, 5.25), -0.0582, 0.0001), "(500, 90, 5.25) s
 check(approx(ebitda_cushion(0, 90, 5.25), 1.0, 1e-9), "with no debt, all of EBITDA can go: the cushion is 1.0")
 check(ebitda_cushion(100, 0, 5.0) is None, "zero EBITDA should give None")
 --- hint
-The lowest compliant EBITDA is debt / max_lev. The cushion is 1 minus that divided by actual EBITDA.
+Handle EBITDA ≤ 0 first and return None. Then work out the minimum EBITDA, then the cushion.
 --- solution
 def ebitda_cushion(debt, ebitda, max_lev):
     """Share of EBITDA that can be lost before breaching max leverage."""

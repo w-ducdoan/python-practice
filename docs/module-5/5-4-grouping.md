@@ -65,7 +65,7 @@ print("shape:", wide.shape)
 
 ## Practice
 
-**1.** Write `sector_market_value(df)`. It adds `market_value`, then returns the sum per sector as a Series.
+**1.** Write `sector_market_value(df)`. It adds `market_value` (shares × price), then returns the sum per sector as a Series.
 
 ```exercise
 id: m5-group-sum
@@ -119,7 +119,7 @@ def sector_counts(df):
     return df["sector"].value_counts().to_dict()
 ```
 
-**3.** Write `sector_table(df)`. It returns one row per sector with three named columns: `positions` (the count of tickers), `market_value` (the sum) and `unrealized_pnl` (the sum of market value minus cost). Sort it by `market_value`, largest first.
+**3.** Write `sector_table(df)`. It returns one row per sector with three named columns: `positions` (the count of tickers), `market_value` (the sum of shares × price) and `unrealized_pnl` (the sum of market value minus cost, where cost = shares × cost_basis). Sort it by `market_value`, largest first.
 
 ```exercise
 id: m5-agg
