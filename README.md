@@ -91,6 +91,7 @@ def covenant_test(debt, ebitda, max_lev):
 ```
 ````
 
+- Put every finance formula the exercise needs in the prompt itself (for example, "using PV = cash flow / (1 + rate)^years"). The learner practices Python, not recalling formulas. Hints are for Python help only, never the only place a formula appears.
 - `id` must be unique across the site. The build fails if two match.
 - Header options: `checkpoint: yes` (no hints, solution locked until passed), `kind: example` (an ungraded "Try it" box), and `files: trades.csv, loan_tape.csv` (copies those files from `docs/data/` into Python's working folder before every run, fresh each time), and `packages: pandas` or `packages: numpy` (loads them into Pyodide before the run. Download time doesn't count toward the 10-second limit).
 - Tests can use `check(condition, message)`, `approx(a, b, tol=0.01)`, `output` (everything printed) and `code` (the learner's code as text), plus any variable or function the learner's code created.
