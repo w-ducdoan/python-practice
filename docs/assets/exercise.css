@@ -1,0 +1,425 @@
+/* Exercise widget and dashboard. Page colors come from the --pp-* tokens in theme.css.
+   The editor and console stay dark in both modes, like most coding platforms. */
+
+.pp-exercise {
+  --pp-ed-bg: #0d1117;
+  --pp-ed-gutter: #0d1117;
+  --pp-ed-line: #161b22;
+  --pp-ed-fg: #e6edf3;
+  --pp-ed-muted: #6e7681;
+  --pp-ed-border: #30363d;
+
+  border: 1px solid var(--pp-border);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  background: var(--pp-surface);
+  overflow: hidden;
+}
+
+/* The theme styles every <pre>, which would otherwise override the hidden attribute. */
+.pp-exercise [hidden] {
+  display: none !important;
+}
+
+/* ---------- Header bar ---------- */
+
+.pp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  flex-wrap: wrap;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--pp-border);
+}
+
+.pp-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.pp-kind {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  color: var(--pp-blue);
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.pp-checkpoint .pp-kind { color: var(--pp-amber); }
+.pp-example .pp-kind { color: var(--pp-muted); }
+
+.pp-title {
+  font-weight: 650;
+  font-size: 0.8rem;
+}
+
+.pp-status {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--pp-border);
+  color: var(--pp-muted);
+  white-space: nowrap;
+}
+
+.pp-status::before {
+  content: "";
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  margin-right: 0.35rem;
+  background: currentColor;
+  vertical-align: 0.05rem;
+}
+
+.pp-st-pass { color: var(--pp-green); border-color: currentColor; }
+.pp-st-due { color: var(--pp-amber); border-color: currentColor; }
+.pp-st-miss { color: var(--pp-red); border-color: currentColor; }
+.pp-example .pp-status::before { display: none; }
+
+.pp-note {
+  font-size: 0.7rem;
+  color: var(--pp-muted);
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  border-bottom: 1px solid var(--pp-border);
+}
+
+.pp-card .pp-note {
+  padding: 0;
+  border: 0;
+  margin-top: 0.6rem;
+}
+
+/* ---------- Editor ---------- */
+
+.pp-exercise .CodeMirror,
+.pp-editor {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  background: var(--pp-ed-bg);
+  color: var(--pp-ed-fg);
+}
+
+.pp-exercise .CodeMirror {
+  height: auto;
+  min-height: 6.5rem;
+  padding: 0.35rem 0;
+}
+
+.pp-exercise .CodeMirror-scroll {
+  min-height: 6.5rem;
+  max-height: 32rem;
+}
+
+.pp-exercise .CodeMirror-gutters {
+  background: var(--pp-ed-gutter);
+  border-right: 1px solid var(--pp-ed-border);
+}
+
+.pp-exercise .CodeMirror-linenumber {
+  color: var(--pp-ed-muted);
+  padding: 0 0.6rem 0 0.4rem;
+}
+
+.pp-exercise .CodeMirror-cursor { border-left: 2px solid #58a6ff; }
+.pp-exercise .CodeMirror-activeline-background { background: var(--pp-ed-line); }
+.pp-exercise .CodeMirror-selected,
+.pp-exercise .CodeMirror-focused .CodeMirror-selected { background: #264f78; }
+.pp-exercise .CodeMirror-matchingbracket { color: #e6edf3 !important; outline: 1px solid #6e7681; }
+
+/* Plain text box, used only if CodeMirror fails to load. */
+.pp-editor {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.8rem;
+  border: 0;
+  resize: vertical;
+  tab-size: 4;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Syntax colors, shared by the editor and the solution panel. */
+.cm-s-pp .cm-keyword { color: #ff7b72; }
+.cm-s-pp .cm-def { color: #d2a8ff; }
+.cm-s-pp .cm-builtin { color: #ffa657; }
+.cm-s-pp .cm-string,
+.cm-s-pp .cm-string-2 { color: #a5d6ff; }
+.cm-s-pp .cm-number { color: #79c0ff; }
+.cm-s-pp .cm-comment { color: #8b949e; font-style: italic; }
+.cm-s-pp .cm-variable-2 { color: #ffa657; }
+.cm-s-pp .cm-operator { color: #ff7b72; }
+.cm-s-pp .cm-meta { color: #d2a8ff; }
+.cm-s-pp .cm-property { color: #79c0ff; }
+.cm-s-pp .cm-atom { color: #79c0ff; }
+.cm-s-pp .cm-error { color: #f85149; }
+
+/* ---------- Toolbar ---------- */
+
+.pp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  border-top: 1px solid var(--pp-border);
+}
+
+.pp-btn {
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.32rem 0.85rem;
+  border: 1px solid var(--pp-border);
+  border-radius: 6px;
+  background: var(--pp-bg);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  transition: border-color 0.12s, background-color 0.12s;
+}
+
+.pp-btn:hover:not(:disabled) {
+  border-color: var(--pp-muted);
+}
+
+.pp-btn:focus-visible {
+  outline: 2px solid var(--pp-blue);
+  outline-offset: 1px;
+}
+
+.pp-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pp-run::before {
+  content: "\25B6";
+  font-size: 0.6rem;
+  margin-right: 0.4rem;
+  color: var(--pp-green);
+}
+
+.pp-primary {
+  background: var(--pp-green-strong);
+  border-color: rgba(240, 246, 252, 0.1);
+  color: #ffffff;
+}
+
+.pp-primary:hover:not(:disabled) {
+  background: #2ea043;
+  border-color: rgba(240, 246, 252, 0.1);
+}
+
+.pp-quiet {
+  margin-left: auto;
+  background: transparent;
+  color: var(--pp-muted);
+}
+
+.pp-shortcut {
+  font-size: 0.62rem;
+  color: var(--pp-muted);
+}
+
+.pp-shortcut kbd {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.6rem;
+  padding: 0.05rem 0.3rem;
+  border: 1px solid var(--pp-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--pp-bg);
+}
+
+@media (max-width: 600px) {
+  .pp-shortcut { display: none; }
+}
+
+/* ---------- Hints ---------- */
+
+.pp-hints:empty { display: none; }
+
+.pp-hints {
+  padding: 0 0.8rem 0.55rem;
+}
+
+.pp-hint {
+  font-size: 0.72rem;
+  padding: 0.45rem 0.7rem;
+  margin: 0.3rem 0 0;
+  border-left: 3px solid var(--pp-amber);
+  border-radius: 0 6px 6px 0;
+  background: var(--pp-bg);
+}
+
+/* ---------- Console output and solution ---------- */
+
+.pp-exercise pre.pp-output,
+.pp-exercise pre.pp-solution {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  margin: 0;
+  padding: 0.6rem 0.8rem 0.7rem;
+  border-top: 1px solid var(--pp-ed-border);
+  border-radius: 0;
+  background: #010409;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.pp-output::before,
+.pp-solution::before {
+  content: attr(data-label);
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e7681;
+  margin-bottom: 0.35rem;
+}
+
+.pp-exercise pre.pp-error { color: #ffa198; }
+.pp-exercise pre.pp-solution { background: var(--pp-ed-bg); }
+
+/* ---------- Test results ---------- */
+
+.md-typeset ul.pp-results:empty { display: none; }
+
+.md-typeset ul.pp-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.55rem 0.8rem;
+  border-top: 1px solid var(--pp-border);
+  font-size: 0.72rem;
+}
+
+.md-typeset ul.pp-results li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0.2rem 0;
+}
+
+.pp-results li::before {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  flex: none;
+}
+
+.pp-pass::before { content: "PASS"; color: var(--pp-green); }
+.pp-fail::before { content: "FAIL"; color: var(--pp-red); }
+
+.md-typeset .pp-results li.pp-done {
+  font-weight: 700;
+  color: var(--pp-green);
+  margin-top: 0.4rem;
+}
+
+.md-typeset .pp-results li.pp-done::before { content: "DONE"; }
+
+/* ---------- Home dashboard ---------- */
+
+.pp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.pp-stat {
+  border: 1px solid var(--pp-border);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  background: var(--pp-surface);
+}
+
+.pp-stat-value {
+  display: block;
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pp-stat-label {
+  font-size: 0.65rem;
+  color: var(--pp-muted);
+}
+
+.pp-card {
+  border: 1px solid var(--pp-border);
+  border-radius: 8px;
+  padding: 0.2rem 1rem 0.9rem;
+  margin: 1rem 0;
+  background: var(--pp-surface);
+}
+
+.pp-card .pp-btn {
+  margin-right: 0.4rem;
+}
+
+.pp-table-scroll {
+  overflow-x: auto;
+}
+
+.pp-table {
+  width: 100%;
+  font-size: 0.72rem;
+  border-collapse: collapse;
+}
+
+.pp-table th,
+.pp-table td {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--pp-border);
+  white-space: nowrap;
+}
+
+.pp-table th {
+  font-weight: 600;
+  color: var(--pp-muted);
+}
+
+.pp-bar {
+  display: inline-block;
+  width: 5rem;
+  height: 0.4rem;
+  margin-right: 0.5rem;
+  border-radius: 999px;
+  background: var(--pp-border);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.pp-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--pp-green);
+}
+
+.pp-mastered {
+  font-weight: 700;
+  color: var(--pp-green);
+}
